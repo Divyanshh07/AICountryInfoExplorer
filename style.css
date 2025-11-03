@@ -1,0 +1,259 @@
+/* 🌍 Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    margin: 0;
+    padding: 0;
+    color: #1f2937;
+}
+
+/* 🌟 Navbar */
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-bottom: 3px solid #e0e0e0;
+}
+
+nav h1 {
+    color: #2563eb;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+/* 🔍 Search Box */
+.search-box {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav input {
+    padding: 0.8rem 1.2rem;
+    border-radius: 40px;
+    border: 2px solid #2563eb;
+    width: 350px;
+    font-size: 1rem;
+    outline: none;
+    background-color: #f9fafb;
+    transition: 0.3s;
+}
+
+nav input:focus {
+    border-color: #1d4ed8;
+    box-shadow: 0 0 6px rgba(37,99,235,0.4);
+}
+
+nav button {
+    border: none;
+    color: white;
+    padding: 0.8rem 1.4rem;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#searchBtn {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+}
+
+#searchBtn:hover {
+    background: linear-gradient(135deg, #1e40af, #2563eb);
+    transform: translateY(-2px);
+}
+
+/* 🌗 Theme Toggle Button */
+.theme-btn {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+}
+.theme-btn:hover {
+    background: linear-gradient(135deg, #1e40af, #2563eb);
+}
+
+/* 💡 Suggestions Dropdown */
+.suggestions {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    max-width: 360px;
+    width: 90%;
+    z-index: 100;
+    display: none;
+}
+.suggestions p {
+    padding: 12px;
+    margin: 0;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1rem;
+}
+.suggestions p:hover {
+    background-color: #f3f4f6;
+}
+
+/* 🌐 Main Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+    flex-wrap: wrap;
+}
+
+/* 🗺️ Country Card */
+.country-card {
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    padding: 2.5rem;
+    width: 420px;
+    text-align: center;
+    transition: 0.4s ease;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.country-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.country-card img {
+    width: 200px;
+    border-radius: 12px;
+    margin-bottom: 1.2rem;
+    border: 2px solid #e5e7eb;
+}
+
+.country-card h2 {
+    margin: 0.6rem 0;
+    color: #334155;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.country-card p {
+    margin: 0.4rem 0;
+    font-size: 1rem;
+    color: #2563eb;
+}
+
+/* 🗺️ Map */
+.map-container iframe {
+    width: 100%;
+    height: 250px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+/* 🏳️ Border Flags */
+.border-flags img {
+    width: 45px;
+    height: 28px;
+    margin: 4px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+.border-flags img:hover {
+    transform: scale(1.15);
+}
+
+/* 💬 Placeholder */
+.placeholder {
+    font-size: 1.3rem;
+    text-align: center;
+    color: #555;
+    margin-top: 3rem;
+}
+
+/* ⏳ Loader */
+.loader {
+    border: 6px solid #e5e7eb;
+    border-top: 6px solid #2563eb;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+    margin: 70px auto;
+}
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* 📜 Footer */
+footer {
+    text-align: center;
+    padding: 1.2rem;
+    background: #ffffff;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
+    margin-top: 2rem;
+    font-size: 0.95rem;
+}
+
+footer a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ✨ Animations */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(15px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* 🌙 DARK MODE */
+body.dark {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #f9fafb;
+}
+
+body.dark nav {
+    background: #1e293b;
+    border-bottom: 3px solid #334155;
+    box-shadow: 0 4px 15px rgba(255,255,255,0.08);
+}
+
+body.dark nav h1 {
+    color: #60a5fa;
+}
+
+body.dark input {
+    background-color: #1e293b;
+    color: #f9fafb;
+    border-color: #3b82f6;
+}
+
+body.dark .country-card {
+    background: #1e293b;
+    color: #f1f5f9;
+    box-shadow: 0 8px 25px rgba(255,255,255,0.05);
+}
+
+body.dark footer {
+    background: #1e293b;
+    color: #f9fafb;
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+    nav input { width: 220px; }
+    .country-card { width: 95%; }
+}
