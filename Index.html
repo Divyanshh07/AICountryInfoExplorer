@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Info Explorer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav>
+    <h1>🌏 Country Info Explorer</h1>
+    <div class="search-box">
+        <input type="text" id="countryInput" placeholder="Enter country name..." />
+        <button id="searchBtn">Search</button>
+        <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
+    </div>
+    <div id="suggestions" class="suggestions"></div>
+</nav>
+
+<main class="container">
+    <div id="result" class="result-section">
+        <p class="placeholder">Type a country name to get details</p>
+    </div>
+</main>
+
+<footer>
+    <p>Developed by <strong>Divyansh</strong> | Powered by REST Countries API 🌐</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
